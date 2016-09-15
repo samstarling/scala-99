@@ -12,4 +12,10 @@ class P03Spec extends FlatSpec with Matchers {
   "nthRecursive" should "return the nth value in a list" in {
     P03.nthRecursive(2, list) should be("c")
   }
+
+  "nthRecursive" should "throw an exception for out-of-bound indexes" in {
+    assertThrows[NoSuchElementException] {
+      P03.nthRecursive(10, List.empty)
+    }
+  }
 }

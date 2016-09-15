@@ -4,6 +4,6 @@ object P01 {
   def lastTailRecursive[A](list: List[A]): A = list match {
     case e :: Nil => e
     case _ :: tail => lastTailRecursive(tail)
-    case _ => ???
+    case _ => throw new NoSuchElementException
   }
 }

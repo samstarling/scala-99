@@ -12,4 +12,10 @@ class P01Spec extends FlatSpec with Matchers {
   "lastTailRecursive" should "return the last value in a list" in {
     P01.lastTailRecursive(list) should be("c")
   }
+
+  "lastTailRecursive" should "throw an exception for empty lists" in {
+    assertThrows[NoSuchElementException] {
+      P01.lastTailRecursive(List.empty)
+    }
+  }
 }
