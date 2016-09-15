@@ -1,3 +1,9 @@
 object P03 {
-  def nth[A](index: Int, list: List[A]): A = ???
+  def nthBuiltIn[A](index: Int, list: List[A]): A = {
+    list(index)
+  }
+
+  def nthRecursive[A](index: Int, list: List[A]): A = {
+    ???
+  }
 }
