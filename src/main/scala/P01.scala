@@ -1,3 +1,9 @@
 object P01 {
-  def builtInLast[A](list: List[A]): A = list.last
+  def lastBuiltIn[A](list: List[A]): A = list.last
+
+  def lastTailRecursive[A](list: List[A]): A = list match {
+    case e :: Nil => e
+    case _ :: tail => lastTailRecursive(tail)
+    case _ => ???
+  }
 }
