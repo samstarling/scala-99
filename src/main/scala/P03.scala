@@ -3,7 +3,9 @@ object P03 {
     list(index)
   }
 
-  def nthRecursive[A](index: Int, list: List[A]): A = {
-    ???
+  def nthRecursive[A](index: Int, list: List[A]): A = (index, list) match {
+    case (0, e :: _) => e
+    case (n, _ :: tail) => nthRecursive(n - 1, tail)
+    case _ => ???
   }
 }
